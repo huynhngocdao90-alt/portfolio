@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/obfuscate.js",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "javascript-obfuscator": "^5.1.0",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^4.1.18",
+    "vite": "^7.3.1",
+    "vite-plugin-static-copy": "^3.1.4"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.18"
+  }
+}
