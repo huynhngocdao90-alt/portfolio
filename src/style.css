@@ -7,14 +7,33 @@
 
 :root {
   font-family: var(--font-body);
-  background-color: #0a0a0a; /* Dark theme by default for minimal premium look */
-  color: #ededed;
+  
+  /* Color Tokens */
+  --color-primary: #6C1CB7; /* Deep Violet */
+  --color-bg: #0a0a0a;
+  --color-text: #ededed;
+  --color-text-muted: #a3a3a3;
+  --color-card-bg: #171717;
+  
+  /* Default to dark mode values */
+  background-color: var(--color-bg);
+  color: var(--color-text);
   scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+/* Light Mode Overrides */
+:root.light {
+  --color-bg: #ffffff;
+  --color-text: #0a0a0a;
+  --color-text-muted: #525252;
+  --color-card-bg: #f5f5f5;
+  color-scheme: light;
 }
 
 ::selection {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: var(--color-primary);
+  color: #ffffff;
 }
 
 body {

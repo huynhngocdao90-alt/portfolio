@@ -39,6 +39,47 @@ mobileMenu.querySelectorAll('.mobile-link').forEach(link => {
 
 
 /**
+ * Theme Toggle
+ */
+const themeBtns = document.querySelectorAll('#theme-toggle, #theme-toggle-mobile');
+const html = document.documentElement;
+
+// Check Local Storage or System Preference
+const savedTheme = localStorage.getItem('theme');
+const systemTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+
+if (savedTheme === 'light' || (!savedTheme && systemTheme === 'light')) {
+  html.classList.add('light');
+  updateIcons('light');
+} else {
+  html.classList.remove('light');
+  updateIcons('dark');
+}
+
+function updateIcons(theme) {
+  themeBtns.forEach(btn => {
+    const icon = btn.querySelector('i');
+    if (theme === 'light') {
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+    } else {
+      icon.classList.remove('fa-sun');
+      icon.classList.add('fa-moon');
+    }
+  });
+}
+
+themeBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    html.classList.toggle('light');
+    const isLight = html.classList.contains('light');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    updateIcons(isLight ? 'light' : 'dark');
+  });
+});
+
+
+/**
  * Data Loading
  */
 async function loadList({ jsonUrl, containerId, renderItem }) {
@@ -77,11 +118,11 @@ loadList({
   containerId: "projects-grid",
   renderItem: (item) => `
     <a href="https://play.google.com/store/apps/details?id=${item.id}" target="_blank" class="group block">
-      <div class="aspect-[16/9] bg-neutral-900 rounded-lg overflow-hidden mb-4 relative border border-neutral-900 border-opacity-50">
+      <div class="aspect-[16/9] bg-[var(--color-card-bg)] rounded-lg overflow-hidden mb-4 relative border border-[var(--color-card-bg)] border-opacity-50">
          <img src="${item.icon}" alt="${item.name}" class="w-full h-full object-contain p-8 group-hover:scale-105 transition-transform duration-500" loading="lazy">
       </div>
-      <h3 class="text-2xl font-bold group-hover:text-neutral-400 transition-colors">${item.name}</h3>
-      <p class="text-neutral-500 mt-1">Mobile Application</p>
+      <h3 class="text-2xl font-bold group-hover:text-[var(--color-primary)] transition-colors">${item.name}</h3>
+      <p class="text-[var(--color-text-muted)] mt-1">Mobile Application</p>
     </a>
   `
 });
