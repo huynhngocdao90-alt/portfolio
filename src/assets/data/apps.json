@@ -8,5 +8,12 @@
         "id": "com.ssteam.sliding_puzzle",
         "name": "Sliding Puzzle",
         "icon": "https://play-lh.googleusercontent.com/prKynU4Ntp8O8-_32XSDZwDV0fbKRPGiStwDBcxI-PDVpwBKaDMPte1r1Y9KA5tvHg=w240-h480-rw"
+    },
+    {
+        "id": "stream-music-app",
+        "name": "Stream Music App",
+        "type": "UI Design",
+        "url": "https://dribbble.com/shots/21176863-Stream-music",
+        "icon": "https://placehold.co/600x400?text=Stream+Music+App"
     }
 ]

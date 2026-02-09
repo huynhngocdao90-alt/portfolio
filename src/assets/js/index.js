@@ -147,15 +147,19 @@ async function loadList({ jsonUrl, containerId, renderItem }) {
 loadList({
   jsonUrl: `${basePath}apps.json`,
   containerId: "projects-grid",
-  renderItem: (item) => `
-    <a href="https://play.google.com/store/apps/details?id=${item.id}" target="_blank" class="group block">
+  renderItem: (item) => {
+    const url = item.url || `https://play.google.com/store/apps/details?id=${item.id}`;
+    const type = item.type || "Mobile Application";
+    return `
+    <a href="${url}" target="_blank" class="group block">
       <div class="aspect-[16/9] bg-[var(--color-card-bg)] rounded-lg overflow-hidden mb-4 relative border border-[var(--color-card-bg)] border-opacity-50">
          <img src="${item.icon}" alt="${item.name}" class="w-full h-full object-contain p-8 group-hover:scale-105 transition-transform duration-500" loading="lazy">
       </div>
       <h3 class="text-2xl font-bold group-hover:text-[var(--color-primary)] transition-colors">${item.name}</h3>
-      <p class="text-[var(--color-text-muted)] mt-1">Mobile Application</p>
+      <p class="text-[var(--color-text-muted)] mt-1">${type}</p>
     </a>
-  `
+  `;
+  }
 });
 
 
