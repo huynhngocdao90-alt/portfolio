@@ -1,19 +1,9 @@
 [
     {
-        "id": "com.ssteam.yugioh_card_builder",
-        "name": "Yugioh Card Builder",
-        "icon": "https://play-lh.googleusercontent.com/ee2X-oT1Dk3AoGNd-5XJcJOoiGCOgMQNRSJmBye9Z6R24aeH-tszYn3RTJGdqPsQQQk=w240-h480-rw"
-    },
-    {
-        "id": "com.ssteam.sliding_puzzle",
-        "name": "Sliding Puzzle",
-        "icon": "https://play-lh.googleusercontent.com/prKynU4Ntp8O8-_32XSDZwDV0fbKRPGiStwDBcxI-PDVpwBKaDMPte1r1Y9KA5tvHg=w240-h480-rw"
-    },
-    {
         "id": "stream-music-app",
         "name": "Stream Music App",
         "type": "UI Design",
         "url": "https://dribbble.com/shots/21176863-Stream-music",
-        "icon": "https://placehold.co/600x400?text=Stream+Music+App"
+        "icon": "/portfolio/assets/images/music_stream.png"
     }
 ]
