@@ -21,8 +21,8 @@
 :root.light {
   --color-bg: #ffffff;
   --color-text: #0a0a0a;
-  --color-text-muted: #525252;
-  --color-card-bg: #f5f5f5;
+  --color-text-muted: #262626;
+  --color-card-bg: #ffffff;
   color-scheme: light;
 }
 
