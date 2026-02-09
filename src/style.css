@@ -3,18 +3,22 @@
 @theme {
   --font-display: "Satoshi", "Inter", sans-serif;
   --font-body: "Satoshi", "Inter", sans-serif;
+  --color-neutral-950: #0a0a0a;
 }
+
+@variant dark (&:where(.dark, .dark *));
 
 :root {
   font-family: var(--font-body);
-  background-color: #0a0a0a; /* Dark theme by default for minimal premium look */
-  color: #ededed;
+  background-color: #ffffff;
+  /* Light theme */
+  color: #0a0a0a;
   scroll-behavior: smooth;
 }
 
 ::selection {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 body {

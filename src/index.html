@@ -1,172 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dao Huynh - UI/UX Designer & Developer</title>
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <!-- Google Tag Manager / Analytics (Preserved) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-TB63B375JB"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-TB63B375JB");
-    </script>
-  </head>
 
-  <body class="bg-neutral-950 text-neutral-100 font-sans selection:bg-white selection:text-black">
-    
-    <!-- Navigation -->
-    <header class="fixed top-0 left-0 w-full z-50 mix-blend-difference px-6 py-6 md:px-12 flex justify-between items-center bg-transparent backdrop-blur-sm">
-      <a href="#hero" class="text-xl font-bold tracking-tighter uppercase">Dao Huynh.</a>
-      <nav class="hidden md:block">
-        <ul class="flex gap-8 text-sm font-medium tracking-wide uppercase opacity-80 hover:opacity-100 transition-opacity">
-          <li><a href="#projects" class="hover:text-neutral-400 transition-colors">Work</a></li>
-          <li><a href="#skills" class="hover:text-neutral-400 transition-colors">Expertise</a></li>
-          <li><a href="#about" class="hover:text-neutral-400 transition-colors">About</a></li>
-          <li><a href="#contact" class="hover:text-neutral-400 transition-colors">Contact</a></li>
-        </ul>
-      </nav>
-      <!-- Mobile Menu Button (Simple) -->
-      <button class="md:hidden text-2xl" id="mobile-menu-btn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dao Huynh - Junior UI/UX Designer | Product Designer & IT Business Analyst | UX, Design Systems, WCAG</title>
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Tag Manager / Analytics (Preserved) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TB63B375JB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-TB63B375JB");
+  </script>
+</head>
+
+<body
+  class="bg-neutral-50 text-neutral-900 font-sans selection:bg-black selection:text-white dark:bg-neutral-950 dark:text-neutral-50 dark:selection:bg-white dark:selection:text-black transition-colors duration-300">
+
+  <!-- Navigation -->
+  <header
+    class="fixed top-0 left-0 w-full z-50 px-6 py-6 md:px-12 flex justify-between items-center bg-transparent backdrop-blur-sm mix-blend-difference text-black dark:text-white">
+    <a href="#hero" class="text-xl font-bold tracking-tighter uppercase">Dao Huynh.</a>
+    <nav class="hidden md:block">
+      <ul
+        class="flex gap-8 text-sm font-medium tracking-wide uppercase opacity-80 hover:opacity-100 transition-opacity items-center">
+        <li><a href="#projects" class="hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors">Work</a>
+        </li>
+        <li><a href="#skills" class="hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors">Expertise</a>
+        </li>
+        <li><a href="#about" class="hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors">About</a></li>
+        <li><a href="#contact" class="hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors">Contact</a>
+        </li>
+        <li>
+          <button id="theme-toggle" class="hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors text-lg"
+            aria-label="Toggle Dark Mode">
+            <i class="fas fa-moon dark:hidden"></i>
+            <i class="fas fa-sun hidden dark:inline"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <!-- Mobile Menu Button (Simple) -->
+    <div class="flex items-center gap-6 md:hidden">
+      <button id="theme-toggle-mobile" class="text-xl" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon dark:hidden"></i>
+        <i class="fas fa-sun hidden dark:inline"></i>
+      </button>
+      <button class="text-2xl" id="mobile-menu-btn">
         <i class="fas fa-bars"></i>
       </button>
-    </header>
+    </div>
+  </header>
 
-    <main class="px-6 md:px-12 max-w-7xl mx-auto">
-      
-      <!-- Hero Section -->
-      <section id="hero" class="min-h-screen flex flex-col justify-center pt-20">
-        <div class="space-y-6">
-          <p class="text-neutral-400 text-sm md:text-base tracking-widest uppercase">Mobile Developer & UX Enthusiast</p>
-          <h1 class="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.9]">
-            CRAFTING <br />
-            DIGITAL <br />
-            <span class="text-neutral-500">EXPERIENCES</span>
-          </h1>
-          <div class="pt-8 max-w-xl text-lg md:text-xl text-neutral-300 leading-relaxed">
-            <p>
-              I'm Dat Nguyen. I build mobile applications and web interfaces that focus on 
-              simplicity, functionality, and aesthetic excellence.
+  <main class="px-6 md:px-12 max-w-7xl mx-auto">
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex flex-col justify-center pt-20">
+      <div class="space-y-6">
+        <p class="text-neutral-600 dark:text-neutral-400 text-sm md:text-base tracking-widest uppercase">Mobile
+          Developer & UX Enthusiast</p>
+        <h1 class="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.9]">
+          CRAFTING <br />
+          DIGITAL <br />
+          <span class="text-neutral-500 dark:text-neutral-400">EXPERIENCES</span>
+        </h1>
+        <div class="pt-8 max-w-xl text-lg md:text-xl text-neutral-700 dark:text-neutral-300 leading-relaxed">
+          <p>
+            I'm Dat Nguyen. I work at the intersection of Product, UX, and Business Analysis, with a strong background
+            in designing internal enterprise systems.
+            As a Product Design – ITBA, I help turn complex business processes into simple, usable, and scalable
+            products by combining user-centered design with structured business analysis.
+            My work includes stakeholder interviews, user flows, wireframes, prototypes, and product requirement
+            documents, working closely with engineering teams from discovery to delivery.
+            I believe great products are not just visually clean, but deeply useful, efficient, and aligned with
+            business goals.
+          </p>
+        </div>
+        <div class="pt-8 flex gap-4">
+          <a href="#projects"
+            class="px-8 py-3 bg-black text-white dark:bg-white dark:text-black font-bold uppercase tracking-wide hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors">
+            View Work
+          </a>
+          <a href="assets/files/CV_Android_Nguyen_Van_Dat.pdf" target="_blank"
+            class="px-8 py-3 border border-neutral-300 dark:border-neutral-700 font-bold uppercase tracking-wide hover:bg-neutral-200 dark:hover:bg-neutral-800 hover:text-black dark:hover:text-white transition-colors">
+            Resume
+          </a>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-12 right-6 md:right-12 animate-bounce">
+        <i class="fas fa-arrow-down text-xl"></i>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 md:py-32">
+      <div class="flex justify-between items-end mb-16">
+        <h2 class="text-4xl md:text-6xl font-bold tracking-tight">Select Work</h2>
+        <span class="text-neutral-500 dark:text-neutral-400 hidden md:inline">2021 - Present</span>
+      </div>
+
+      <!-- Rendered via JS -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16" id="projects-grid">
+        <!-- Items will be injected here. 
+                Fallback static content for design preview: -->
+        <div class="group cursor-pointer">
+          <div class="aspect-[4/3] bg-neutral-200 rounded-lg overflow-hidden mb-4 relative">
+            <!-- Placeholder for project image -->
+            <div class="absolute inset-0 bg-neutral-300 group-hover:bg-neutral-400 transition-colors"></div>
+          </div>
+          <h3
+            class="text-2xl font-bold group-hover:text-neutral-600 dark:group-hover:text-neutral-300 transition-colors">
+            Project Name</h3>
+          <p class="text-neutral-500 dark:text-neutral-400">Mobile Application</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills / Expertise -->
+    <section id="skills" class="py-24 border-t border-neutral-200 dark:border-neutral-800">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <h2 class="text-4xl font-bold tracking-tight">Expertise</h2>
+        <div class="md:col-span-2 space-y-12">
+          <div>
+            <h3 class="text-xl font-bold mb-4 text-neutral-600 dark:text-neutral-400 uppercase tracking-widest">Web
+              Designer</h3>
+            <p class="text-2xl md:text-3xl leading-snug">
+              Kotlin, Java, Dart (Flutter), Fastlane, Play Store Management, CI/CD
             </p>
           </div>
-          <div class="pt-8 flex gap-4">
-             <a href="#projects" class="px-8 py-3 bg-white text-black font-bold uppercase tracking-wide hover:bg-neutral-200 transition-colors">
-               View Work
-             </a>
-             <a href="assets/files/CV_Android_Nguyen_Van_Dat.pdf" target="_blank" class="px-8 py-3 border border-neutral-700 font-bold uppercase tracking-wide hover:bg-neutral-900 transition-colors">
-               Resume
-             </a>
+          <div>
+            <h3 class="text-xl font-bold mb-4 text-neutral-600 dark:text-neutral-400 uppercase tracking-widest">Web &
+              Backend</h3>
+            <p class="text-2xl md:text-3xl leading-snug">
+              JavaScript, Python, MongoDB, Firebase, Tailwind CSS
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4 text-neutral-600 dark:text-neutral-400 uppercase tracking-widest">Core
+              Concept</h3>
+            <p class="text-2xl md:text-3xl leading-snug">
+              OOP, Design Patterns, User Experience Design, Clean Architecture
+            </p>
           </div>
         </div>
-        
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-12 right-6 md:right-12 animate-bounce">
-          <i class="fas fa-arrow-down text-xl"></i>
+      </div>
+    </section>
+
+    <!-- About / Contact -->
+    <section id="about" class="py-24 border-t border-neutral-200 dark:border-neutral-800">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div class="relative">
+          <img src="assets/images/profile.avif" alt="Dat Nguyen"
+            class="w-full md:w-2/3 grayscale hover:grayscale-0 transition-all duration-700 rounded-lg object-cover" />
         </div>
-      </section>
-
-      <!-- Projects Section -->
-      <section id="projects" class="py-24 md:py-32">
-        <div class="flex justify-between items-end mb-16">
-           <h2 class="text-4xl md:text-6xl font-bold tracking-tight">Select Work</h2>
-           <span class="text-neutral-500 hidden md:inline">2021 - Present</span>
+        <div class="flex flex-col justify-center">
+          <h2 class="text-4xl font-bold mb-8">About Me</h2>
+          <p class="text-lg text-neutral-600 dark:text-neutral-300 mb-6 leading-relaxed">
+            I am a passionate software developer with a strong focus on mobile technologies.
+            Beyond coding, I have a deep appreciation for good design and aquascaping (Fish Keeping).
+            I believe that good software, like a well-maintained aquarium, requires patience, balance, and attention to
+            detail.
+          </p>
+          <div class="flex gap-6 mt-8">
+            <a href="https://github.com/datnguyencr" target="_blank"
+              class="text-2xl hover:text-black dark:hover:text-white text-neutral-500 dark:text-neutral-400 transition-colors"><i
+                class="fab fa-github"></i></a>
+            <a href="https://gitlab.com/datnguyencr" target="_blank"
+              class="text-2xl hover:text-black dark:hover:text-white text-neutral-500 dark:text-neutral-400 transition-colors"><i
+                class="fab fa-gitlab"></i></a>
+            <a href="https://www.linkedin.com/in/dat-nguyen-3aa7bb117" target="_blank"
+              class="text-2xl hover:text-black dark:hover:text-white text-neutral-500 dark:text-neutral-400 transition-colors"><i
+                class="fab fa-linkedin"></i></a>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Rendered via JS -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16" id="projects-grid">
-           <!-- Items will be injected here. 
-                Fallback static content for design preview: -->
-           <div class="group cursor-pointer">
-              <div class="aspect-[4/3] bg-neutral-900 rounded-lg overflow-hidden mb-4 relative">
-                 <!-- Placeholder for project image -->
-                 <div class="absolute inset-0 bg-neutral-800 group-hover:bg-neutral-700 transition-colors"></div>
-              </div>
-              <h3 class="text-2xl font-bold group-hover:text-neutral-400 transition-colors">Project Name</h3>
-              <p class="text-neutral-500">Mobile Application</p>
-           </div>
-        </div>
-      </section>
+    <!-- Contact Footer -->
+    <section id="contact" class="py-32 flex flex-col items-center justify-center text-center">
+      <h2 class="text-5xl md:text-7xl font-bold tracking-tighter mb-8">Let's Talk.</h2>
+      <a href="mailto:datnguyen.cr@gmail.com"
+        class="text-2xl md:text-3xl border-b-2 border-black/20 dark:border-white/20 pb-2 hover:border-black dark:hover:border-white hover:text-black dark:hover:text-white transition-all text-neutral-800 dark:text-neutral-200">
+        datnguyen.cr@gmail.com
+      </a>
+      <footer class="mt-24 text-neutral-500 dark:text-neutral-500 text-sm uppercase tracking-widest">
+        © 2024 Dat Nguyen. All Rights Reserved.
+      </footer>
+    </section>
 
-      <!-- Skills / Expertise -->
-      <section id="skills" class="py-24 border-t border-neutral-800">
-         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <h2 class="text-4xl font-bold tracking-tight">Expertise</h2>
-            <div class="md:col-span-2 space-y-12">
-               <div>
-                 <h3 class="text-xl font-bold mb-4 text-neutral-400 uppercase tracking-widest">Web Designer</h3>
-                 <p class="text-2xl md:text-3xl leading-snug">
-                   Kotlin, Java, Dart (Flutter), Fastlane, Play Store Management, CI/CD
-                 </p>
-               </div>
-               <div>
-                 <h3 class="text-xl font-bold mb-4 text-neutral-400 uppercase tracking-widest">Web & Backend</h3>
-                 <p class="text-2xl md:text-3xl leading-snug">
-                   JavaScript, Python, MongoDB, Firebase, Tailwind CSS
-                 </p>
-               </div>
-               <div>
-                  <h3 class="text-xl font-bold mb-4 text-neutral-400 uppercase tracking-widest">Core Concept</h3>
-                  <p class="text-2xl md:text-3xl leading-snug">
-                    OOP, Design Patterns, User Experience Design, Clean Architecture
-                  </p>
-               </div>
-            </div>
-         </div>
-      </section>
+  </main>
 
-      <!-- About / Contact -->
-      <section id="about" class="py-24 border-t border-neutral-800">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-           <div class="relative">
-              <img src="assets/images/profile.avif" alt="Dat Nguyen" class="w-full md:w-2/3 grayscale hover:grayscale-0 transition-all duration-700 rounded-lg object-cover" />
-           </div>
-           <div class="flex flex-col justify-center">
-              <h2 class="text-4xl font-bold mb-8">About Me</h2>
-              <p class="text-lg text-neutral-400 mb-6 leading-relaxed">
-                I am a passionate software developer with a strong focus on mobile technologies. 
-                Beyond coding, I have a deep appreciation for good design and aquascaping (Fish Keeping). 
-                I believe that good software, like a well-maintained aquarium, requires patience, balance, and attention to detail.
-              </p>
-              <div class="flex gap-6 mt-8">
-                 <a href="https://github.com/datnguyencr" target="_blank" class="text-2xl hover:text-white text-neutral-500 transition-colors"><i class="fab fa-github"></i></a>
-                 <a href="https://gitlab.com/datnguyencr" target="_blank" class="text-2xl hover:text-white text-neutral-500 transition-colors"><i class="fab fa-gitlab"></i></a>
-                 <a href="https://www.linkedin.com/in/dat-nguyen-3aa7bb117" target="_blank" class="text-2xl hover:text-white text-neutral-500 transition-colors"><i class="fab fa-linkedin"></i></a>
-              </div>
-           </div>
-        </div>
-      </section>
+  <script src="assets/js/index.js" type="module"></script>
+</body>
 
-      <!-- Contact Footer -->
-      <section id="contact" class="py-32 flex flex-col items-center justify-center text-center">
-         <h2 class="text-5xl md:text-7xl font-bold tracking-tighter mb-8">Let's Talk.</h2>
-         <a href="mailto:datnguyen.cr@gmail.com" class="text-2xl md:text-3xl border-b-2 border-white/20 pb-2 hover:border-white hover:text-white transition-all text-neutral-300">
-           datnguyen.cr@gmail.com
-         </a>
-         <footer class="mt-24 text-neutral-600 text-sm uppercase tracking-widest">
-           © 2024 Dat Nguyen. All Rights Reserved.
-         </footer>
-      </section>
-
-    </main>
-
-    <script src="assets/js/index.js" type="module"></script>
-  </body>
 </html>

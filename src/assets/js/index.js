@@ -3,6 +3,37 @@ import * as Utils from "./utils.js";
 const basePath = "assets/data/";
 
 /**
+ * Dark Mode Toggle
+ */
+const themeToggleBtn = document.getElementById('theme-toggle');
+const themeToggleMobileBtn = document.getElementById('theme-toggle-mobile');
+
+// Check for saved user preference, if any, on load of the website
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.classList.add('dark');
+} else {
+  document.documentElement.classList.remove('dark');
+}
+
+function toggleTheme() {
+  if (document.documentElement.classList.contains('dark')) {
+    document.documentElement.classList.remove('dark');
+    localStorage.theme = 'light';
+  } else {
+    document.documentElement.classList.add('dark');
+    localStorage.theme = 'dark';
+  }
+}
+
+if (themeToggleBtn) {
+  themeToggleBtn.addEventListener('click', toggleTheme);
+}
+
+if (themeToggleMobileBtn) {
+  themeToggleMobileBtn.addEventListener('click', toggleTheme);
+}
+
+/**
  * Mobile Menu Toggle
  */
 const mobileBtn = document.getElementById('mobile-menu-btn');
@@ -55,12 +86,12 @@ async function loadList({ jsonUrl, containerId, renderItem }) {
       // Preserve grid layout wrapper if needed, or just append the HTML string directly
       // Here we assume renderItem returns the inner HTML of a wrapper
       // But for better control, we'll let renderItem return a Node or string
-      
+
       const tempDiv = document.createElement('div');
       tempDiv.innerHTML = renderItem(item);
-      
+
       while (tempDiv.firstChild) {
-         fragment.appendChild(tempDiv.firstChild);
+        fragment.appendChild(tempDiv.firstChild);
       }
     });
 
