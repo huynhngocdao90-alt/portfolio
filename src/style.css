@@ -14,6 +14,16 @@
   /* Light theme */
   color: #0a0a0a;
   scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+/* Light Mode Overrides */
+:root.light {
+  --color-bg: #ffffff;
+  --color-text: #0a0a0a;
+  --color-text-muted: #525252;
+  --color-card-bg: #f5f5f5;
+  color-scheme: light;
 }
 
 ::selection {
