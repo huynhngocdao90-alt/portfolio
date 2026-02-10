@@ -1,266 +1,374 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Dao Huynh - Product Designer & IT Business Analyst | UX, Design Systems,
+      WCAG
+    </title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Tag Manager / Analytics (Preserved) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TB63B375JB"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-TB63B375JB");
+    </script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>
-    Dao Huynh - Product Designer & IT Business Analyst | UX, Design Systems,
-    WCAG
-  </title>
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="stylesheet" href="./style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-  <!-- Google Tag Manager / Analytics (Preserved) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TB63B375JB"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("config", "G-TB63B375JB");
-  </script>
-</head>
+  <body
+    class="bg-white text-neutral-900 font-sans selection:bg-black selection:text-white dark:bg-neutral-950 dark:text-neutral-50 dark:selection:bg-white dark:selection:text-black transition-colors duration-300"
+  >
+    <!-- Navigation -->
+    <header
+      class="fixed top-0 left-0 w-full z-50 px-6 py-6 md:px-12 flex justify-between items-center bg-transparent backdrop-blur-sm text-black dark:text-white"
+    >
+      <a href="#hero" class="text-xl font-bold tracking-tighter uppercase"
+        >D.H</a
+      >
+      <nav class="hidden md:block">
+        <ul
+          class="flex gap-8 text-sm font-medium tracking-wide uppercase hover:opacity-100 transition-opacity items-center"
+        >
+          <li>
+            <a
+              href="#projects"
+              class="hover:text-black dark:hover:text-neutral-300 transition-colors"
+              >Work</a
+            >
+          </li>
+          <li>
+            <a
+              href="#skills"
+              class="hover:text-black dark:hover:text-neutral-300 transition-colors"
+              >Expertise</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="hover:text-black dark:hover:text-neutral-300 transition-colors"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="hover:text-black dark:hover:text-neutral-300 transition-colors"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <button
+              id="theme-toggle"
+              class="hover:text-black dark:hover:text-neutral-300 transition-colors text-lg"
+              aria-label="Toggle Dark Mode"
+            >
+              <i class="fas fa-moon dark:hidden"></i>
+              <i class="fas fa-sun hidden dark:inline"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <!-- Mobile Menu Button (Simple) -->
+      <div class="flex items-center gap-6 md:hidden">
+        <button
+          id="theme-toggle-mobile"
+          class="text-xl"
+          aria-label="Toggle Dark Mode"
+        >
+          <i class="fas fa-moon dark:hidden"></i>
+          <i class="fas fa-sun hidden dark:inline"></i>
+        </button>
+        <button class="text-2xl" id="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
 
-<body
-  class="bg-white text-neutral-900 font-sans selection:bg-black selection:text-white dark:bg-neutral-950 dark:text-neutral-50 dark:selection:bg-white dark:selection:text-black transition-colors duration-300">
-  <!-- Navigation -->
-  <header
-    class="fixed top-0 left-0 w-full z-50 px-6 py-6 md:px-12 flex justify-between items-center bg-transparent backdrop-blur-sm text-black dark:text-white">
-    <a href="#hero" class="text-xl font-bold tracking-tighter uppercase">D.H</a>
-    <nav class="hidden md:block">
-      <ul
-        class="flex gap-8 text-sm font-medium tracking-wide uppercase hover:opacity-100 transition-opacity items-center">
-        <li>
-          <a href="#projects" class="hover:text-black dark:hover:text-neutral-300 transition-colors">Work</a>
-        </li>
-        <li>
-          <a href="#skills" class="hover:text-black dark:hover:text-neutral-300 transition-colors">Expertise</a>
-        </li>
-        <li>
-          <a href="#about" class="hover:text-black dark:hover:text-neutral-300 transition-colors">About</a>
-        </li>
-        <li>
-          <a href="#contact" class="hover:text-black dark:hover:text-neutral-300 transition-colors">Contact</a>
-        </li>
-        <li>
-          <button id="theme-toggle" class="hover:text-black dark:hover:text-neutral-300 transition-colors text-lg"
-            aria-label="Toggle Dark Mode">
-            <i class="fas fa-moon dark:hidden"></i>
-            <i class="fas fa-sun hidden dark:inline"></i>
-          </button>
-        </li>
-      </ul>
-    </nav>
-    <!-- Mobile Menu Button (Simple) -->
-    <div class="flex items-center gap-6 md:hidden">
-      <button id="theme-toggle-mobile" class="text-xl" aria-label="Toggle Dark Mode">
-        <i class="fas fa-moon dark:hidden"></i>
-        <i class="fas fa-sun hidden dark:inline"></i>
-      </button>
-      <button class="text-2xl" id="mobile-menu-btn">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </header>
-
-  <main class="px-6 md:px-12 max-w-7xl mx-auto">
-    <!-- Hero Section -->
-    <section id="hero" class="min-h-screen flex flex-col justify-center pt-20">
-      <div class="space-y-6">
-        <p class="text-neutral-800 dark:text-neutral-400 text-sm md:text-base tracking-widest uppercase">
-          Product Designer & IT Business Analyst
-        </p>
-        <h1 class="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.9]">
-          CRAFTING DIGITAL<br />
-          <span class="text-neutral-700 dark:text-neutral-400">EXPERIENCES</span>
-        </h1>
-        <div class="pt-8 max-w-xl text-lg md:text-xl text-neutral-900 dark:text-neutral-300 leading-relaxed">
-          <p>
-            I'm Dao Huynh, I work focused on designing practical,
-            user-centered solutions for internal and enterprise products, from
-            user flows and wireframes to UI and prototypes. Experienced in
-            working with product and engineering teams to turn business
-            requirements into usable and accessible designs.
+    <main class="px-6 md:px-12 max-w-7xl mx-auto">
+      <!-- Hero Section -->
+      <section
+        id="hero"
+        class="min-h-screen flex flex-col justify-center pt-20"
+      >
+        <div class="space-y-6">
+          <p
+            class="text-neutral-800 dark:text-neutral-400 text-sm md:text-base tracking-widest uppercase"
+          >
+            Product Designer & IT Business Analyst
           </p>
+          <h1
+            class="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.9]"
+          >
+            CRAFTING DIGITAL<br />
+            <span class="text-neutral-700 dark:text-neutral-400"
+              >EXPERIENCES</span
+            >
+          </h1>
+          <div
+            class="pt-8 max-w-xl text-lg md:text-xl text-neutral-900 dark:text-neutral-300 leading-relaxed"
+          >
+            <p>
+              I'm Dao Huynh, I work focused on designing practical,
+              user-centered solutions for internal and enterprise products, from
+              user flows and wireframes to UI and prototypes. Experienced in
+              working with product and engineering teams to turn business
+              requirements into usable and accessible designs.
+            </p>
+          </div>
+          <div class="pt-8 flex gap-4">
+            <a
+              href="#projects"
+              class="px-8 py-3 bg-black text-white dark:bg-white dark:text-black font-bold uppercase tracking-wide hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors"
+            >
+              View Work
+            </a>
+            <a
+              href="public/files/CV_HUYNH_NGOC_DAO_Product_Designer_&_IT_Business_Analyst.pdf"
+              target="_blank"
+              class="px-8 py-3 border border-neutral-300 dark:border-neutral-700 font-bold uppercase tracking-wide hover:bg-neutral-200 dark:hover:bg-neutral-800 hover:text-black dark:hover:text-white transition-colors"
+            >
+              Resume
+            </a>
+          </div>
         </div>
-        <div class="pt-8 flex gap-4">
-          <a href="#projects"
-            class="px-8 py-3 bg-black text-white dark:bg-white dark:text-black font-bold uppercase tracking-wide hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors">
-            View Work
-          </a>
-          <a href="/files/CV - HUYNH NGOC DAO - Product Designer & IT Business Analyst.pdf" target="_blank"
-            class="px-8 py-3 border border-neutral-300 dark:border-neutral-700 font-bold uppercase tracking-wide hover:bg-neutral-200 dark:hover:bg-neutral-800 hover:text-black dark:hover:text-white transition-colors">
-            Resume
-          </a>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-12 right-6 md:right-12 animate-bounce">
+          <i class="fas fa-arrow-down text-xl"></i>
         </div>
-      </div>
+      </section>
 
-      <!-- Scroll Indicator -->
-      <div class="absolute bottom-12 right-6 md:right-12 animate-bounce">
-        <i class="fas fa-arrow-down text-xl"></i>
-      </div>
-    </section>
+      <!-- Projects Section -->
+      <section id="projects" class="py-24 md:py-32">
+        <div class="flex justify-between items-end mb-16">
+          <h2 class="text-4xl md:text-6xl font-bold tracking-tight">
+            Select Work
+          </h2>
+          <span class="text-neutral-500 dark:text-neutral-400 hidden md:inline"
+            >2022 - Present</span
+          >
+        </div>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-24 md:py-32">
-      <div class="flex justify-between items-end mb-16">
-        <h2 class="text-4xl md:text-6xl font-bold tracking-tight">
-          Select Work
-        </h2>
-        <span class="text-neutral-500 dark:text-neutral-400 hidden md:inline">2022 - Present</span>
-      </div>
-
-      <!-- Rendered via JS -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16" id="projects-grid">
-        <!-- Items will be injected here. 
+        <!-- Rendered via JS -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16"
+          id="projects-grid"
+        >
+          <!-- Items will be injected here. 
                 Fallback static content for design preview: -->
-        <div class="group cursor-pointer">
-          <div class="aspect-[4/3] bg-neutral-200 rounded-lg overflow-hidden mb-4 relative">
-            <img src="/images/music_stream.png" alt="Stream Music App"
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
-          </div>
-          <h3
-            class="text-2xl font-bold group-hover:text-neutral-800 dark:group-hover:text-neutral-300 transition-colors">
-            Stream Music App
-          </h3>
-          <p class="text-neutral-700 dark:text-neutral-400">
-            Mobile Application
-          </p>
-        </div>
-        <div class="group cursor-pointer">
-          <div class="aspect-[4/3] bg-neutral-200 rounded-lg overflow-hidden mb-4 relative">
-            <img src="/images/web_perfume_paycheckout.png" alt="Ecomerce Checkout Web Design"
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
-          </div>
-          <h3
-            class="text-2xl font-bold group-hover:text-neutral-800 dark:group-hover:text-neutral-300 transition-colors">
-            Ecomerce Checkout
-          </h3>
-          <p class="text-neutral-700 dark:text-neutral-400">
-            Web Design
-          </p>
-        </div>
-        <div class="group cursor-pointer">
-          <div class="aspect-[4/3] bg-neutral-200 rounded-lg overflow-hidden mb-4 relative">
-            <img src="/images/music_stream.png" alt="Stream Music App"
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
-          </div>
-          <h3
-            class="text-2xl font-bold group-hover:text-neutral-800 dark:group-hover:text-neutral-300 transition-colors">
-            Stream Music App
-          </h3>
-          <p class="text-neutral-700 dark:text-neutral-400">
-            Mobile Application
-          </p>
-        </div>
-        <div class="group cursor-pointer">
-          <div class="aspect-[4/3] bg-neutral-200 rounded-lg overflow-hidden mb-4 relative">
-            <img src="/images/music_stream.png" alt="Stream Music App"
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
-          </div>
-          <h3
-            class="text-2xl font-bold group-hover:text-neutral-800 dark:group-hover:text-neutral-300 transition-colors">
-            Stream Music App
-          </h3>
-          <p class="text-neutral-700 dark:text-neutral-400">
-            Mobile Application
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills / Expertise -->
-    <section id="skills" class="py-24 border-t border-neutral-200 dark:border-neutral-800">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-        <h2 class="text-4xl font-bold tracking-tight">Expertise</h2>
-        <div class="md:col-span-2 space-y-12">
-          <div>
-            <h3 class="text-xl font-bold mb-4 text-neutral-800 dark:text-neutral-400 uppercase tracking-widest">
-              Product & UX
+          <div class="group cursor-pointer">
+            <div
+              class="aspect-[4/3] bg-neutral-200 rounded-lg overflow-hidden mb-4 relative"
+            >
+              <img
+                src="/images/music_stream.png"
+                alt="Stream Music App"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <h3
+              class="text-2xl font-bold group-hover:text-neutral-800 dark:group-hover:text-neutral-300 transition-colors"
+            >
+              Stream Music App
             </h3>
-            <p class="text-2xl md:text-3xl leading-snug">
-              Product Design, UX Design / UI Design, User Flow, Wireframing,
-              Prototyping, Design System & Design Guidelines, UX Research &
-              Usability Testing, Accessibility (WCAG 2.2), Figma
+            <p class="text-neutral-700 dark:text-neutral-400">
+              Mobile Application
             </p>
           </div>
-          <div>
-            <h3 class="text-xl font-bold mb-4 text-neutral-800 dark:text-neutral-400 uppercase tracking-widest">
-              Business Analysis / ITBA
+          <div class="group cursor-pointer">
+            <div
+              class="aspect-[4/3] bg-neutral-200 rounded-lg overflow-hidden mb-4 relative"
+            >
+              <img
+                src="/images/web_perfume_paycheckout.png"
+                alt="Ecomerce Checkout Web Design"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <h3
+              class="text-2xl font-bold group-hover:text-neutral-800 dark:group-hover:text-neutral-300 transition-colors"
+            >
+              Ecomerce Checkout
             </h3>
-            <p class="text-2xl md:text-3xl leading-snug">
-              Requirements Gathering & Analysis, PRD / BRD / UML / BPMN /
-              Functional Specifications, UAT Support & Validation,
-              Documentation
+            <p class="text-neutral-700 dark:text-neutral-400">Web Design</p>
+          </div>
+          <div class="group cursor-pointer">
+            <div
+              class="aspect-[4/3] bg-neutral-200 rounded-lg overflow-hidden mb-4 relative"
+            >
+              <img
+                src="/images/music_stream.png"
+                alt="Stream Music App"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <h3
+              class="text-2xl font-bold group-hover:text-neutral-800 dark:group-hover:text-neutral-300 transition-colors"
+            >
+              Stream Music App
+            </h3>
+            <p class="text-neutral-700 dark:text-neutral-400">
+              Mobile Application
             </p>
           </div>
-          <div>
-            <h3 class="text-xl font-bold mb-4 text-neutral-800 dark:text-neutral-400 uppercase tracking-widest">
-              System & Data
+          <div class="group cursor-pointer">
+            <div
+              class="aspect-[4/3] bg-neutral-200 rounded-lg overflow-hidden mb-4 relative"
+            >
+              <img
+                src="/images/music_stream.png"
+                alt="Stream Music App"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <h3
+              class="text-2xl font-bold group-hover:text-neutral-800 dark:group-hover:text-neutral-300 transition-colors"
+            >
+              Stream Music App
             </h3>
-            <p class="text-2xl md:text-3xl leading-snug">
-              ERD & Database Design, API Understanding / API Testing, Basic
-              SQL / Database Testing
+            <p class="text-neutral-700 dark:text-neutral-400">
+              Mobile Application
             </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- About / Contact -->
-    <section id="about" class="py-24 border-t border-neutral-200 dark:border-neutral-800">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-        <div class="relative">
-          <img src="/images/profile.jpg" alt="Dao Huynh"
-            class="w-full md:w-2/3 grayscale hover:grayscale-0 transition-all duration-700 rounded-lg object-cover" />
-        </div>
-        <div class="flex flex-col justify-center">
-          <h2 class="text-4xl font-bold mb-8">About Me</h2>
-          <p class="text-lg text-neutral-800 dark:text-neutral-300 mb-6 leading-relaxed">
-            I work at the intersection of Product, UX, and Business Analysis,
-            with a strong background in designing internal enterprise systems.
-            As a Product Design – ITBA, I help turn complex business processes
-            into simple, usable, and scalable products by combining
-            user-centered design with structured business analysis. My work
-            includes stakeholder interviews, user flows, wireframes,
-            prototypes, and product requirement documents, working closely
-            with engineering teams from discovery to delivery. I believe great
-            products are not just visually clean, but deeply useful,
-            efficient, and aligned with business goals.
-          </p>
-          <div class="flex gap-6 mt-8">
-            <a href="https://github.com/huynhngocdao90-alt" target="_blank"
-              class="text-2xl hover:text-black dark:hover:text-white text-neutral-700 dark:text-neutral-400 transition-colors"><i
-                class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/dao-huynh-9a7882343" target="_blank"
-              class="text-2xl hover:text-black dark:hover:text-white text-neutral-700 dark:text-neutral-400 transition-colors"><i
-                class="fab fa-linkedin"></i></a>
+      <!-- Skills / Expertise -->
+      <section
+        id="skills"
+        class="py-24 border-t border-neutral-200 dark:border-neutral-800"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <h2 class="text-4xl font-bold tracking-tight">Expertise</h2>
+          <div class="md:col-span-2 space-y-12">
+            <div>
+              <h3
+                class="text-xl font-bold mb-4 text-neutral-800 dark:text-neutral-400 uppercase tracking-widest"
+              >
+                Product & UX
+              </h3>
+              <p class="text-2xl md:text-3xl leading-snug">
+                Product Design, UX Design / UI Design, User Flow, Wireframing,
+                Prototyping, Design System & Design Guidelines, UX Research &
+                Usability Testing, Accessibility (WCAG 2.2), Figma
+              </p>
+            </div>
+            <div>
+              <h3
+                class="text-xl font-bold mb-4 text-neutral-800 dark:text-neutral-400 uppercase tracking-widest"
+              >
+                Business Analysis / ITBA
+              </h3>
+              <p class="text-2xl md:text-3xl leading-snug">
+                Requirements Gathering & Analysis, PRD / BRD / UML / BPMN /
+                Functional Specifications, UAT Support & Validation,
+                Documentation
+              </p>
+            </div>
+            <div>
+              <h3
+                class="text-xl font-bold mb-4 text-neutral-800 dark:text-neutral-400 uppercase tracking-widest"
+              >
+                System & Data
+              </h3>
+              <p class="text-2xl md:text-3xl leading-snug">
+                ERD & Database Design, API Understanding / API Testing, Basic
+                SQL / Database Testing
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact Footer -->
-    <section id="contact" class="py-32 flex flex-col items-center justify-center text-center">
-      <h2 class="text-5xl md:text-7xl font-bold tracking-tighter mb-8">
-        Let's Talk.
-      </h2>
-      <a href="mailto:huynhngocdao.90@gmail.com"
-        class="text-2xl md:text-3xl border-b-2 border-black/20 dark:border-white/20 pb-2 hover:border-black dark:hover:border-white hover:text-black dark:hover:text-white transition-all text-neutral-800 dark:text-neutral-200">
-        huynhngocdao.90@gmail.com
-      </a>
-      <footer class="mt-24 text-neutral-700 dark:text-neutral-500 text-sm uppercase tracking-widest">
-        © 2024 Dat Nguyen. All Rights Reserved.
-      </footer>
-    </section>
-  </main>
+      <!-- About / Contact -->
+      <section
+        id="about"
+        class="py-24 border-t border-neutral-200 dark:border-neutral-800"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+          <div class="relative">
+            <img
+              src="/images/profile.jpg"
+              alt="Dao Huynh"
+              class="w-full md:w-2/3 grayscale hover:grayscale-0 transition-all duration-700 rounded-lg object-cover"
+            />
+          </div>
+          <div class="flex flex-col justify-center">
+            <h2 class="text-4xl font-bold mb-8">About Me</h2>
+            <p
+              class="text-lg text-neutral-800 dark:text-neutral-300 mb-6 leading-relaxed"
+            >
+              I work at the intersection of Product, UX, and Business Analysis,
+              with a strong background in designing internal enterprise systems.
+              As a Product Design – ITBA, I help turn complex business processes
+              into simple, usable, and scalable products by combining
+              user-centered design with structured business analysis. My work
+              includes stakeholder interviews, user flows, wireframes,
+              prototypes, and product requirement documents, working closely
+              with engineering teams from discovery to delivery. I believe great
+              products are not just visually clean, but deeply useful,
+              efficient, and aligned with business goals.
+            </p>
+            <div class="flex gap-6 mt-8">
+              <a
+                href="https://github.com/huynhngocdao90-alt"
+                target="_blank"
+                class="text-2xl hover:text-black dark:hover:text-white text-neutral-700 dark:text-neutral-400 transition-colors"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/dao-huynh-9a7882343"
+                target="_blank"
+                class="text-2xl hover:text-black dark:hover:text-white text-neutral-700 dark:text-neutral-400 transition-colors"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <script src="assets/js/index.js" type="module"></script>
-</body>
+      <!-- Contact Footer -->
+      <section
+        id="contact"
+        class="py-32 flex flex-col items-center justify-center text-center"
+      >
+        <h2 class="text-5xl md:text-7xl font-bold tracking-tighter mb-8">
+          Let's Talk.
+        </h2>
+        <a
+          href="mailto:huynhngocdao.90@gmail.com"
+          class="text-2xl md:text-3xl border-b-2 border-black/20 dark:border-white/20 pb-2 hover:border-black dark:hover:border-white hover:text-black dark:hover:text-white transition-all text-neutral-800 dark:text-neutral-200"
+        >
+          huynhngocdao.90@gmail.com
+        </a>
+        <footer
+          class="mt-24 text-neutral-700 dark:text-neutral-500 text-sm uppercase tracking-widest"
+        >
+          © 2024 Dat Nguyen. All Rights Reserved.
+        </footer>
+      </section>
+    </main>
 
+    <script src="assets/js/index.js" type="module"></script>
+  </body>
 </html>
